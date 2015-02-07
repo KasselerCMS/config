@@ -1,0 +1,20 @@
+{
+  "name": "kasseler/config",
+  "description": "Kasseler configure package ",
+  "authors": [
+    {
+      "name": "Igor Ognichenko",
+      "email": "ognichenko.igor@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "symfony/yaml": "2.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Kasseler": "src/"
+    }
+  }
+}
