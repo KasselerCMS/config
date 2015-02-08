@@ -1,6 +1,7 @@
 {
   "name": "kasseler/config",
   "description": "Kasseler configure package ",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Igor Ognichenko",
