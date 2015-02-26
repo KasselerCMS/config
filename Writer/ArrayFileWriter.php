@@ -1,12 +1,14 @@
 <?php
-namespace Kasseler\Core\Config\Writer;
+
+namespace Kasseler\Component\Config\Writer;
 
 /**
- * Json File Writer
+ * Array File Writer
  */
-class JsonFileWriter extends AbstractFileWriter
+class ArrayFileWriter extends AbstractFileWriter
 {
-    private $ext = '.json';
+    private $ext = '.php';
+
     /**
      * {@inheritdoc}
      */
@@ -19,7 +21,7 @@ class JsonFileWriter extends AbstractFileWriter
             }
         }
         try {
-            file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
+            file_put_contents($file, "<?php\nreturn ".var_export($array, true).";\n");
         } catch (\Exception $e) {
             trigger_error("Error creating file", E_USER_ERROR);
         }

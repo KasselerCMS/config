@@ -1,12 +1,15 @@
 <?php
-namespace Kasseler\Core\Config\Writer;
+
+namespace Kasseler\Component\Config\Writer;
+
+use Symfony\Component\Yaml\Yaml;
 
 /**
- * Array File Writer
+ * Yaml File Loader
  */
-class ArrayFileWriter extends AbstractFileWriter
+class YamlFileWriter extends AbstractFileWriter
 {
-    private $ext = '.php';
+    private $ext = '.yml';
 
     /**
      * {@inheritdoc}
@@ -20,9 +23,11 @@ class ArrayFileWriter extends AbstractFileWriter
             }
         }
         try {
-            file_put_contents($file, "<?php\nreturn ".var_export($array, true).";\n");
+            file_put_contents($file, Yaml::dump($array, 20, $indent = 4, $exceptionOnInvalidType = true, $objectSupport = true));
         } catch (\Exception $e) {
             trigger_error("Error creating file", E_USER_ERROR);
         }
+
+
     }
 }

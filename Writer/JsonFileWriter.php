@@ -1,15 +1,13 @@
 <?php
-namespace Kasseler\Core\Config\Writer;
 
-use Symfony\Component\Yaml\Yaml;
+namespace Kasseler\Component\Config\Writer;
 
 /**
- * Yaml File Loader
+ * Json File Writer
  */
-class YamlFileWriter extends AbstractFileWriter
+class JsonFileWriter extends AbstractFileWriter
 {
-    private $ext = '.yml';
-
+    private $ext = '.json';
     /**
      * {@inheritdoc}
      */
@@ -22,11 +20,9 @@ class YamlFileWriter extends AbstractFileWriter
             }
         }
         try {
-            file_put_contents($file, Yaml::dump($array, 20, $indent = 4, $exceptionOnInvalidType = true, $objectSupport = true));
+            file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
         } catch (\Exception $e) {
             trigger_error("Error creating file", E_USER_ERROR);
         }
-
-
     }
 }

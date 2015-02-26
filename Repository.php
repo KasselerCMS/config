@@ -1,9 +1,9 @@
 <?php
 
-namespace Kasseler\Core\Config;
+namespace Kasseler\Component\Config;
 
-use Kasseler\Core\Config\Reader\AbstractFileReader;
-use Kasseler\Core\Config\Writer\AbstractFileWriter;
+use Kasseler\Component\Config\Reader\AbstractFileReader;
+use Kasseler\Component\Config\Writer\AbstractFileWriter;
 
 class Repository
 {

@@ -1,9 +1,14 @@
 Config Component
 =======
 Config Component is a file configuration loader and saver that supports PHP, XML, JSON, and YAML files.
-
-Usage
------
+### Requirements
+ - PHP >= 5.4
+ - symfony/yaml
+### Installation
+```sh
+$ composer require kasseler/config
+```
+### Usage
 Initialization Yaml configuration
 
 ```php

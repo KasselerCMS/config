@@ -1,7 +1,11 @@
 {
   "name": "kasseler/config",
   "description": "Kasseler configure package ",
-  "version": "1.0.0",
+  "keywords": ["config", "config writer", "config reader"],
+  "type": "library",
+  "version": "1.0.1",
+  "license": "MIT",
+  "homepage": "http://kasseler-cms.net",
   "authors": [
     {
       "name": "Igor Ognichenko",
@@ -13,8 +17,7 @@
     "symfony/yaml": "2.*"
   },
   "autoload": {
-    "psr-0": {
-      "Kasseler": "src/"
-    }
-  }
+    "psr-0": { "Kasseler\\Component\\Config\\": "" }
+  },
+  "target-dir": "Kasseler/Component/Config"
 }

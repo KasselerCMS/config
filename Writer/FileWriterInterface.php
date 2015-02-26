@@ -1,5 +1,6 @@
 <?php
-namespace Kasseler\Core\Config\Writer;
+
+namespace Kasseler\Component\Config\Writer;
 
 /**
  * File Writer Interface

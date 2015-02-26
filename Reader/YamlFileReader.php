@@ -1,5 +1,6 @@
 <?php
-namespace Kasseler\Core\Config\Reader;
+
+namespace Kasseler\Component\Config\Reader;
 
 use Symfony\Component\Yaml\Yaml;
 
