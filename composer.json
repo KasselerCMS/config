@@ -1,6 +1,6 @@
 {
   "name": "kasseler/config",
-  "description": "Kasseler configure package ",
+  "description": "Configure files library",
   "keywords": ["config", "config writer", "config reader"],
   "type": "library",
   "version": "1.0.1",
